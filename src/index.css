@@ -1,0 +1,561 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SPARKZ INFOTECH Design System - Medical Coding Training Institute */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: linear-gradient(135deg, #1E315C 0%, #E5E4E4 100%);
+    --background-solid: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    /* Blue Gradient Theme - Based on uploaded image */
+    --primary: 216 100% 50%;        /* Bright Blue #0066FF */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 65%;  /* Lighter Blue */
+    --primary-dark: 220 100% 35%;   /* Darker Blue */
+    --primary-glow: 216 100% 60%;   /* Glowing Blue */
+    
+    /* Complementary Blue Shades */
+    --secondary: 210 100% 70%;      /* Light Blue */
+    --secondary-foreground: 220 100% 20%;
+    --secondary-light: 205 100% 80%; /* Very Light Blue */
+    --secondary-dark: 220 100% 45%;  /* Medium Blue */
+    
+    /* Success & Support Colors */
+    --success: 142.1 70% 42%;       /* Refined Green */
+    --success-foreground: 0 0% 100%;
+    
+    /* Blue theme colors for header/footer */
+    --white-section: 216 100% 50%;  /* Blue header/footer */
+    --white-section-foreground: 0 0% 100%;
+    --green-accent: 216 100% 60%;   /* Blue accent color */
+    --accent: 210 100% 70%;         /* Light Blue accent */
+    --accent-foreground: 220 100% 20%;
+    
+    /* Neutral Colors */
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 100% 20%;
+    --radius: 0.75rem;
+    
+    /* Blue Gradients - Custom navy/deep blue theme */
+    --gradient-primary: linear-gradient(to bottom, hsl(214 100% 21%), hsl(211 100% 32%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 20%) 0%, hsl(214 100% 21%) 50%, hsl(211 100% 32%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(211 100% 31%) 0%, hsl(214 100% 21%) 100%);
+    --gradient-brand: linear-gradient(to bottom, hsl(214 100% 21%) 0%, hsl(211 100% 32%) 100%);
+    
+    /* Blue Shadows - Brand themed */
+    --shadow-elegant: 0 10px 30px -10px hsl(216 100% 50% / 0.25);
+    --shadow-glow: 0 0 40px hsl(216 100% 60% / 0.4);
+    --shadow-navy: 0 8px 32px hsl(220 100% 35% / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Chart colors - Blue theme */
+    --chart-1: 216 100% 50%;
+    --chart-2: 210 100% 65%;
+    --chart-3: 220 100% 35%;
+    --chart-4: 205 100% 75%;
+    --chart-5: 225 100% 40%;
+
+    /* Sidebar - Blue theme */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 216 100% 50%;
+    --sidebar-primary: 216 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 100% 95%;
+    --sidebar-accent-foreground: 216 100% 50%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 216 100% 50%;
+  }
+
+  .dark {
+    --background: 220 100% 8%;       /* Dark Blue Background */
+    --foreground: 0 0% 95%;
+    --card: 220 100% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 100% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Dark Mode Blue Colors */
+    --primary: 216 100% 60%;         /* Bright Blue in dark mode */
+    --primary-foreground: 220 100% 10%;
+    --primary-light: 210 100% 75%;
+    --primary-dark: 220 100% 40%;
+    --primary-glow: 216 100% 70%;
+    
+    /* Darker blue as secondary in dark */
+    --secondary: 220 100% 45%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-light: 210 100% 60%;
+    --secondary-dark: 225 100% 30%;
+    
+    /* Support colors for dark */
+    --success: 142.1 65% 48%;
+    --success-foreground: 0 0% 95%;
+    
+    /* Blue theme colors for dark mode header/footer */
+    --white-section: 216 100% 60%;  /* Blue background in dark mode */
+    --white-section-foreground: 0 0% 100%;
+    --green-accent: 210 100% 70%;   /* Light blue accent for dark mode */
+    --accent: 216 100% 60%;
+    --accent-foreground: 220 100% 10%;
+    
+    /* Dark neutrals */
+    --muted: 221 39% 15%;
+    --muted-foreground: 220 9% 65%;
+    --border: 221 39% 18%;
+    --input: 221 39% 18%;
+    --ring: 43 96% 56%;
+    
+    /* Dark mode blue gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(216 100% 60%) 0%, hsl(210 100% 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 8%) 0%, hsl(216 100% 60%) 50%, hsl(210 100% 75%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(220 100% 20%) 0%, hsl(216 100% 60%) 100%);
+    --gradient-brand: linear-gradient(45deg, hsl(216 100% 60%) 0%, hsl(220 100% 25%) 50%, hsl(216 100% 60%) 100%);
+    
+    /* Dark blue shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(216 100% 60% / 0.3);
+    --shadow-glow: 0 0 40px hsl(216 100% 60% / 0.6);
+    --shadow-navy: 0 8px 32px hsl(220 100% 8% / 0.5);
+    
+    /* Sidebar dark blue */
+    --sidebar-background: 220 100% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 216 100% 60%;
+    --sidebar-primary-foreground: 220 100% 8%;
+    --sidebar-accent: 220 50% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 50% 18%;
+    --sidebar-ring: 216 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+@layer components {
+  /* Background patterns - Nexgen themed */
+  .bg-geometric {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(221 100% 20% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(43 96% 56% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(221 100% 35% / 0.1) 0%, transparent 50%);
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(circle at 1px 1px, hsl(45 85% 50% / 0.12) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  /* Interactive elements with brand colors */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Custom gradient backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-cta {
+    background: var(--gradient-cta);
+  }
+
+  .bg-gradient-brand {
+    background: var(--gradient-brand);
+  }
+
+  /* Course card with enhanced animations */
+  .course-card {
+    transition: var(--transition-bounce);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .course-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: var(--shadow-navy), var(--shadow-glow);
+    border-color: hsl(var(--primary));
+  }
+
+  .course-card img {
+    transition: var(--transition-smooth);
+  }
+
+  .course-card:hover img {
+    transform: scale(1.15) rotate(2deg);
+  }
+
+  /* Stats strip with brand gradient */
+  .stats-strip {
+    background: var(--gradient-brand);
+    color: white;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats-strip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, hsl(45 85% 50% / 0.15) 0%, transparent 50%);
+  }
+
+  /* Floating animation */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Typography utilities */
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Animation keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes slideHorizontal {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes slideInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+    }
+  }
+
+  @keyframes heroBgMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Animation classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+
+  .animate-slide-in-bottom {
+    animation: slideInBottom 0.6s ease-out;
+  }
+
+  .animate-slide-up-down {
+    animation: slideUpDown 3s ease-in-out infinite;
+  }
+
+  .animate-slide-horizontal {
+    animation: slideHorizontal 8s linear infinite;
+  }
+
+  .hero-animated-bg {
+    background: linear-gradient(-45deg, hsl(220 100% 35%), hsl(216 100% 50%), hsl(210 100% 65%), hsl(216 100% 60%));
+    background-size: 400% 400%;
+    animation: heroBgMove 15s ease infinite;
+  }
+
+  /* Enhanced course card animations with stagger effect */
+  .course-slide-horizontal {
+    animation: slideHorizontalBounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  }
+
+  /* Blue theme course animations */
+  .course-card-blue-entrance {
+    animation: blueEntranceSlide 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes blueEntranceSlide {
+    0% {
+      transform: translateX(-100px) rotate(-10deg) scale(0.7);
+      opacity: 0;
+      box-shadow: none;
+    }
+    50% {
+      transform: translateX(10px) rotate(3deg) scale(1.05);
+      opacity: 0.8;
+      box-shadow: 0 15px 35px hsl(216 100% 50% / 0.2);
+    }
+    100% {
+      transform: translateX(0) rotate(0deg) scale(1);
+      opacity: 1;
+      box-shadow: 0 10px 30px hsl(216 100% 50% / 0.15);
+    }
+  }
+
+  /* Blue gradient hover effects for courses */
+  .course-card-blue:hover {
+    background: linear-gradient(145deg, hsl(216 100% 50% / 0.1), hsl(210 100% 70% / 0.1));
+    border-color: hsl(216 100% 50%);
+    box-shadow: 0 20px 40px hsl(216 100% 50% / 0.2), 0 0 50px hsl(216 100% 60% / 0.3);
+    transform: translateY(-15px) scale(1.05);
+  }
+
+  /* Mobile-first responsive course cards */
+  .mobile-course-card {
+    @apply rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card)));
+    border: 2px solid hsl(var(--border));
+    transform-style: preserve-3d;
+  }
+
+  .mobile-course-card:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(5deg);
+    border-color: hsl(var(--primary));
+    box-shadow: 0 20px 40px hsl(var(--primary) / 0.15);
+  }
+
+  @keyframes slideHorizontalBounce {
+    0% {
+      transform: translateX(-120px) scale(0.8) rotate(-5deg);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(10px) scale(1.05) rotate(2deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(0) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  /* Mobile course card unique animations */
+  .mobile-bounce-in {
+    animation: mobileBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  }
+
+  @keyframes mobileBounceIn {
+    0% {
+      transform: scale(0.3) rotate(-10deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1) rotate(5deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  .course-card-bounce {
+    animation: nexgenBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  }
+
+  @keyframes nexgenBounceIn {
+    0% {
+      transform: scale(0.2) rotate(-5deg);
+      opacity: 0;
+    }
+    40% {
+      transform: scale(1.1) rotate(2deg);
+      opacity: 0.7;
+    }
+    70% {
+      transform: scale(0.95) rotate(-1deg);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  /* Staggered animation delays for course cards */
+  .course-card:nth-child(1) { animation-delay: 0.1s; }
+  .course-card:nth-child(2) { animation-delay: 0.2s; }
+  .course-card:nth-child(3) { animation-delay: 0.3s; }
+  .course-card:nth-child(4) { animation-delay: 0.4s; }
+  .course-card:nth-child(5) { animation-delay: 0.5s; }
+  .course-card:nth-child(6) { animation-delay: 0.6s; }
+  .course-card:nth-child(7) { animation-delay: 0.7s; }
+  .course-card:nth-child(8) { animation-delay: 0.8s; }
+  .course-card:nth-child(9) { animation-delay: 0.9s; }
+
+  /* Enhanced Mobile responsive utilities */
+  @media (max-width: 768px) {
+    .mobile-enhanced {
+      @apply px-3 py-2;
+    }
+    
+    .mobile-text-responsive {
+      @apply text-sm leading-relaxed;
+    }
+    
+    .mobile-button-enhanced {
+      @apply w-full py-4 text-base rounded-2xl shadow-lg;
+    }
+    
+    .mobile-card-spacing {
+      @apply space-y-6;
+    }
+    
+    /* Touch-friendly button sizes */
+    .mobile-touch-button {
+      @apply min-h-12 px-6 py-3 text-base rounded-xl;
+    }
+    
+    /* Better mobile spacing */
+    .mobile-section-padding {
+      @apply py-8 px-4;
+    }
+    
+    /* Mobile-optimized hero text */
+    .mobile-hero-text {
+      @apply text-2xl sm:text-3xl leading-tight;
+    }
+    
+    /* Improved mobile cards */
+    .mobile-card {
+      @apply p-4 rounded-2xl shadow-lg;
+    }
+  }
+  
+  /* Tablet responsive enhancements */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .tablet-optimized {
+      @apply px-6 py-4;
+    }
+  }
+
+  .stats-counter {
+    transition: all 0.3s ease;
+  }
+
+  .stats-counter:hover {
+    transform: scale(1.1);
+    animation: pulseGlow 2s infinite;
+  }
+
+  /* Page transition animations */
+  .page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .page-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .page-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+  }
+}
