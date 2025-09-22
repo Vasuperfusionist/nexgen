@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="mb-6">
               <img 
-                src="/nexgen-footer-logo-new.png" 
+                src="/nexgen-logo.png" 
                 alt="NeXgen Healthcare Logo" 
                 className="h-16 object-contain filter brightness-150"
               />
