@@ -37,12 +37,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-2">
               <img 
-                src="/nexgen-logo.png" 
+                src="/nexgen-logo-transparent.png" 
                 alt="NeXgen Healthcare Logo" 
-                className="h-16 object-contain filter brightness-150"
+                className="h-12 object-contain"
               />
+              <div className="flex flex-col justify-center -space-y-0.5">
+                <span className="text-white font-bold text-xl leading-tight tracking-wide">
+                  Ne<span className="text-yellow-300">X</span>gen
+                </span>
+                <span className="text-white/90 font-semibold text-sm leading-tight" style={{ marginLeft: '1.15rem' }}>
+                  Healthcare
+                </span>
+              </div>
             </div>
             <p className="text-white/90 leading-relaxed">
               NeXgen Healthcare is a trusted name in medical coding training, helping students become certified professionals with career-ready skills.
